@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  clickhouse:
+    image: bitnami/clickhouse:24.8.2
+    restart: always
+    container_name: clickhouse
+    environment:
+      ALLOW_EMPTY_PASSWORD: no
+      CLICKHOUSE_ADMIN_USER: yutfut
+      CLICKHOUSE_ADMIN_PASSWORD: yutfut
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9440:9440"
+#    volumes:
+#      - ../volumes/click_house:/var/lib/clickhouse
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    env_file:
+      - ./redis.env

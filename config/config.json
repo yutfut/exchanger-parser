@@ -1,0 +1,15 @@
+{
+  "clickHouse": {
+    "host": "127.0.0.1",
+    "port": "9000",
+    "database": "exchanger",
+    "username": "yutfut",
+    "password": "yutfut",
+    "debug": false
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": "6379",
+    "password": "yutfut"
+  }
+}

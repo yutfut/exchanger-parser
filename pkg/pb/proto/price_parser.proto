@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package price_parser;
+
+option go_package = "./;exchanger_parser_pb";
+
+service PriceParserService {
+  rpc GetRate(GetRateRequest) returns (GetRateResponse);
+}
+
+message GetRateResponse {
+  string rate = 1;
+}
+
+message GetRateRequest {
+  uint32 exchange = 1;
+  uint32 exchangersConditional = 2;
+}
